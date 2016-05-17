@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>rock paper scissors 2.0</title>
+	<title>train time</title>
 
 	<!-- ****** FireBase Src Link ****** -->
 	<script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
@@ -17,49 +17,67 @@
 
 	<div class="container">
 
-		<div style="background:transparent !important" class="jumbotron text-center">
-			<h1>Rock Paper Scissors</h1>
+		<div style="background: #F80000 !important" class="jumbotron text-center">
+			<h1>Train Time</h1>
+			<h5>a train information list</h5>
 		</div>
 
 		<div class="row">
-			<div class="col-md-2"></div>
-			<div class="col-md-2"></div>
-				<form>
-					Name:
-					<input type="text" name="firstname">
-					<button id="save-name" type="button" class="btn btn-info">Submit</button>
-				</form>
-			<div class="col-md-2"></div>
-			<div class="col-md-2"></div>
+			<div id="current-train">
+				<div class="col-md-12">
+					<div class="panel panel-danger">
+						<div class="panel-heading">
+							<h3 class="panel-title">Current Train Schedule</h3>
+						</div>
+
+						<div class="row">
+
+							<div class="col-md-1"></div>
+
+							<div id="train-name">
+								<div class="col-md-2">
+									<h4 class="tname text-center">Train Name</h4>
+								</div>
+							</div>
+
+							<div id="destination">
+								<div class="col-md-2">
+									<h4 class="destination text-center">Destination</h4>
+								</div>
+							</div>
+
+							<div id="frequency">
+								<div class="col-md-2">
+									<h4 class="frequency text-center">Frequency (min)</h4>
+								</div>
+							</div>
+
+							<div id="next-arrival">
+								<div class="col-md-2">
+									<h4 class="narrival text-center">Next Arrival</h4>
+								</div>
+							</div>
+
+							<div id="minutes-away">
+								<div class="col-md-2">
+									<h4 class="maway text-center">Minutes Away</h4>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 
-		<br>
 
-		<div class="row">
-			<div class="col-md-2"></div>
-			<div class="col-md-2"></div>
-			<div id="display-name"></div>
-			<div class="col-md-2"></div>
-			<div class="col-md-2"></div>
-		</div>
+		<div class="row"></div>
 
-		<br>
 
-		<div class="row">
-			<div class="col-md-2"></div>
-			<div class="chatDisplay col-md-8"></div>
-			<div class="col-md-2"></div>
-		</div>
+		<div class="row"></div>
 
-		<br>
 
-		<div class="row">
-			<div class="col-md-2"></div>
-			<div class="col-md-7">
-    		<input type="text" class="form-control">
-  			</div>
-  			<button id="send-message" type="button" class="btn btn-info">Send</button>
-  		</div>
+		<div class="row"></div>
 
 	</div>
 
