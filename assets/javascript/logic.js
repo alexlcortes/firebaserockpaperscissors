@@ -8,10 +8,12 @@ var dataRef = new Firebase(url);
 // form values
 var trainName = "";
 var destination = "";
-var firstTrainTime = 0;
+var firstTrainTime =0;
 var frequency = 0;
-var currentHour = moment().hour();
-var currentMinute = moment().minutes();
+// var currentHour = moment().hour();
+// var currentMinute = moment().minutes();
+
+var nextArrival = moment(firstTrainTime).add(frequency, 'minutes');
 
 
 
@@ -34,6 +36,8 @@ $("#submitTrain").on("click", function() {
 		// dateAdded: Firebase.ServerValue.TIMESTAMP
 	})
 
+	// var nextArrival = moment(firstTrainTime).add(frequency, 'minutes').format('LLL');
+
 	return false;
 
 	});
@@ -45,8 +49,9 @@ dataRef.on("child_added", function(childSnapshot) {
 	console.log(childSnapshot.val().firstTrainTime);
 	console.log("Minutes: ", childSnapshot.val().frequency);
 
-	console.log("Current Hour: ", currentHour);
-	console.log("Current Minute: ", currentMinute);
+	// console.log("Current Hour: ", currentHour);
+	// console.log("Current Minute: ", currentMinute);
+	console.log(nextArrival);
 
 
 
