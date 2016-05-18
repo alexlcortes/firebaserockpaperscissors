@@ -10,6 +10,12 @@ var trainName = "";
 var destination = "";
 var firstTrainTime = 0;
 var frequency = 0;
+var now = moment();
+var currentTime = moment().hours();
+
+var nextArrival = moment().add(firstTrainTime, frequency);
+
+
 
 
 // capture train information from button click
@@ -30,6 +36,8 @@ $("#submitTrain").on("click", function() {
 		// dateAdded: Firebase.ServerValue.TIMESTAMP
 	})
 
+	
+
 	return false;
 
 });
@@ -40,6 +48,11 @@ dataRef.on("child_added", function(childSnapshot) {
 	console.log(childSnapshot.val().destination);
 	console.log(childSnapshot.val().firstTrainTime);
 	console.log(childSnapshot.val().frequency);
+
+	console.log(now);
+	console.log(currentTime);
+	console.log("---------------------------------------------");
+	console.log(nextArrival);
 
 
 // I am not sure how this will pan out
