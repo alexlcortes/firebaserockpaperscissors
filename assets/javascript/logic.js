@@ -11,11 +11,6 @@ var destination = "";
 var firstTrainTime = 0;
 var frequency = 0;
 var now = moment();
-var currentTime = moment().hours();
-
-var nextArrival = moment().add(firstTrainTime, frequency);
-
-
 
 
 // capture train information from button click
@@ -36,8 +31,6 @@ $("#submitTrain").on("click", function() {
 		// dateAdded: Firebase.ServerValue.TIMESTAMP
 	})
 
-	
-
 	return false;
 
 });
@@ -50,12 +43,10 @@ dataRef.on("child_added", function(childSnapshot) {
 	console.log(childSnapshot.val().frequency);
 
 	console.log(now);
-	console.log(currentTime);
-	console.log("---------------------------------------------");
-	console.log(nextArrival);
+	console.log(now + frequency);
 
 
-// I am not sure how this will pan out
+// I am not sure how this will pan out but it looks like it puts my inputs in the right place...
 $('.tname').append("<div class='row'><span id='trainname'> "
 	+childSnapshot.val().trainName+" </span></div>")
 
@@ -68,5 +59,4 @@ $('.frequent').append("<div class='row'><span id='frequen'> "
 });
 });
 
-// console.log(nextArrival);
 

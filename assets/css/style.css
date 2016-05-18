@@ -1,1 +1,32 @@
+.tname {
+	font-weight: bold;
 
+}
+
+#trainname {
+	font-weight: normal;
+}
+
+.destinat {
+	font-weight: bold;
+}
+
+#destin {
+	font-weight: normal;
+}
+
+.frequent {
+	font-weight: bold;
+}
+
+#frequen {
+	font-weight: normal;
+}
+
+.narrival {
+	font-weight: bold;
+}
+
+.maway {
+	font-weight: bold;
+}

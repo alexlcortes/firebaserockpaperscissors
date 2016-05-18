@@ -33,16 +33,17 @@
 </head>
 <body>
 
-	<div class="container">
-
+<div class="container">
+	
 		<div style="background: #F80000 !important" class="jumbotron text-center">
-			<h1>Train Time</h1>
-			<h5>a train information list</h5>
+			<h1 style="color: white ">Train Time</h1>
+			<h5 style="color: white ">a train information document</h5>
 		</div>
+	</div>
 
 		<div class="row">
 			<div id="current-train">
-				<div class="col-md-12">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 					<div class="panel panel-danger">
 						<div class="panel-heading">
 							<h3 class="panel-title">Current Train Schedule</h3>
@@ -51,31 +52,31 @@
 						<div class="row">
 
 							<div id="train-name">
-								<div class="col-md-2">
+								<div class="col-xs-2 col-sm-2 col-md-2">
 									<h4 class="tname text-center">Train Name</h4>
 								</div>
 							</div>
 
 							<div id="destination">
-								<div class="col-md-2">
+								<div class="col-xs-2 col-sm-2 col-md-2">
 									<h4 class="destinat text-center">Destination</h4>
 								</div>
 							</div>
 
 							<div id="frequency">
-								<div class="col-md-2">
-									<h4 class="frequent text-center">Frequency (min)</h4>
+								<div class="col-xs-2 col-sm-2 col-md-2">
+									<h4 class="frequent text-center">Frequency</h4>
 								</div>
 							</div>
 
 							<div id="next-arrival">
-								<div class="col-md-2">
+								<div class="col-xs-2 col-sm-2 col-md-2">
 									<h4 class="narrival text-center">Next Arrival</h4>
 								</div>
 							</div>
 
 							<div id="minutes-away">
-								<div class="col-md-2">
+								<div class="col-xs-2 col-sm-2 col-md-2">
 									<h4 class="maway text-center">Minutes Away</h4>
 								</div>
 							</div>
@@ -110,7 +111,7 @@
 
   					<div class="form-group">
     					<label for="train-frequency">Frequency</label>
-    					<input type="time" class="form-control" id="frequencyinput">
+    					<input type="number" class="form-control" id="frequencyinput">
   					</div>
 
   					<button id="submitTrain" type="submit" class="btn btn-danger">Submit</button>
