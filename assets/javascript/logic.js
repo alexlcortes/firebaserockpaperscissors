@@ -45,21 +45,34 @@ dataRef.on("child_added", function(childSnapshot) {
 
 
 // I am not sure how this will pan out
-$('#current-train').append("<div class='panel-body><span id='trainName'> "
-	+childSnapshot.val().trainName+" </span><span id='destination'> "
-	+childSnapshot.val().destination+" </span><span id='firstTrainTime'> "
-	+childSnapshot.val().firstTrainTime+" </span><span id='frequency'> "
+$('.tname').append("<div class='row'><span id='trainname'> "
+	+childSnapshot.val().trainName+" </span></div>")
+
+$('.destinat').append("<div class='row'><span id='destin'> "
+	+childSnapshot.val().destination+" </span></div>")
+
+$('.frequent').append("<div class='row'><span id='frequen'> "
 	+childSnapshot.val().frequency+" </span></div>")
+
+
+
+
+
+
+	// " </span><span id='destination'> "
+	// +childSnapshot.val().destination+" </span><span id='firstTrainTime'> "
+	// +childSnapshot.val().firstTrainTime+" </span><span id='frequency'> "
+	// +childSnapshot.val().frequency+" </span></div>")
 
 }, function(errorObject) {
 
 });
 
-dataRef.orderByChild("dateAdded").limitToLast(1).on("child_added", function(snapshop) {
-	$('#train-name').html(snapshot.val().trainName);
-	$('#destination').html(snapshot.val().destination);
-	$('#frequency').html(snapshot.val().frequency);
-})
+// dataRef.orderByChild("dateAdded").limitToLast(1).on("child_added", function(snapshot) {
+// 	$('#train-name').html(snapshot.val().trainName);
+// 	$('#destination').html(snapshot.val().destination);
+// 	$('#frequency').html(snapshot.val().frequency);
+// })
 
 });
 
