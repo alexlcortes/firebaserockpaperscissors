@@ -10,7 +10,10 @@ var trainName = "";
 var destination = "";
 var firstTrainTime = 0;
 var frequency = 0;
-var now = moment();
+var currentHour = moment().hour();
+var currentMinute = moment().minutes();
+
+
 
 
 // capture train information from button click
@@ -33,17 +36,19 @@ $("#submitTrain").on("click", function() {
 
 	return false;
 
-});
+	});
 
 dataRef.on("child_added", function(childSnapshot) {
 	// Log everything that's coming out of snapshot
 	console.log(childSnapshot.val().trainName);
 	console.log(childSnapshot.val().destination);
 	console.log(childSnapshot.val().firstTrainTime);
-	console.log(childSnapshot.val().frequency);
+	console.log("Minutes: ", childSnapshot.val().frequency);
 
-	console.log(now);
-	console.log(now + frequency);
+	console.log("Current Hour: ", currentHour);
+	console.log("Current Minute: ", currentMinute);
+
+
 
 
 // I am not sure how this will pan out but it looks like it puts my inputs in the right place...
@@ -56,7 +61,7 @@ $('.destinat').append("<div class='row'><span id='destin'> "
 $('.frequent').append("<div class='row'><span id='frequen'> "
 	+childSnapshot.val().frequency+" </span></div>")
 
-});
+	});
 });
 
 
